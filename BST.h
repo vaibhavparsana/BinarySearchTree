@@ -1,7 +1,4 @@
-/* \
-   Binary Search Tree implementation taken from my slides.
-   You must modify this code so each tree node stores a double
-   floating-point number instead of a string. */
+
    
 typedef struct{
     double num;

@@ -13,7 +13,6 @@ static Student list[SIZE];
 // Last name,first name,ID,GPA
 // 'fileName' is the name of the text file to read.
 // Returns the number of lines read, or -1 on errors.
-// You may add a parameter to this function if you wish.
 int readFile(const char fileName[]) {
     FILE *fptr;
     int lines = 0;
@@ -37,7 +36,7 @@ int readFile(const char fileName[]) {
         fscanf(fptr, "%ld,", &ID);
         fscanf(fptr, "%lf ", &GPA);
 
-        //** Your code to store student info in an array of Student structures goes here
+
 		strcpy(list[lines].lastName, lastName); //copy input of lastname to structure
 		strcpy(list[lines].firstName, firstName); //copy input of firstname to structure
 		list[lines].ID = ID; //copy input of ID to structure
@@ -78,7 +77,7 @@ int main(int argc, char** argv) {
 	
     printf("\n%d lines read from the file.\n", lines);
     
-    //** Your code goes here **//
+
 	
 	qsort(list,lines,sizeof(Student),cmpfunc); // qsort to sort GPA in decending order
 	for(i=0;i<newSize;i++) {
